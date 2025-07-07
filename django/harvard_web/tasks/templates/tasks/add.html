@@ -1,0 +1,63 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{% static 'tasks/styles.css' %}">
+   <title>Tasks</title>
+</head>
+
+<body>
+   <header class="container">
+      <br>
+      <div class="form-wrapper">
+         <form action="{% url 'tasks:add' %}" class="form" method="POST">
+            {% csrf_token %}
+            
+            <h1>Adicionar Tarefas</h1>
+
+            <span class="input-span">
+               <input type="text" name="task" id="task" />
+            </span>
+
+            <h1>Prioridade</h1>
+
+            <span class="input-span">
+               <input type="number" name="priority" id="" max="5" min="1"/>
+            </span>
+
+            <button class="cssbuttons-io-button">
+               <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+               </svg>
+               <span>
+                  Adicionar
+               </span>
+            </button>
+         </form>
+      </div>
+      <div class="button-wrapper">
+         <button class="learn-more">
+            <span class="circle" aria-hidden="true">
+               <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">
+               <a href="{% url 'tasks:index' %}" class="button-text">View Tasks</a>
+            </span>
+         </button>
+      </div>
+
+   </header>
+</body>
+
+</html>
+
+{% endblock %}

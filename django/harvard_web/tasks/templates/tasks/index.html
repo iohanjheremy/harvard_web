@@ -1,0 +1,34 @@
+{% extends "tasks/layout.html" %}
+
+{% load static %}
+
+
+{% block body %}
+
+<link rel="stylesheet" href="{% static 'tasks/styles.css' %}">
+<title>Tasks</title>
+<header class="container">
+
+<div class="task-list">
+   <ul>
+      {% for task in tasks %}
+      <li>{{ task }}</li>
+      {% endfor %}
+   </ul>
+</div>
+
+
+<div class="button-wrapper">
+   <button class="learn-more">
+      <span class="circle" aria-hidden="true">
+         <span class="icon arrow"></span>
+      </span>
+      <span class="button-text">
+         <a href="{% url 'tasks:add' %}" class="button-text">Add task</a>
+      </span>
+   </button>
+</div>
+
+
+</header>
+{% endblock %}
