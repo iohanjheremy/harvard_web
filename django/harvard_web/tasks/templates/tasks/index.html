@@ -12,7 +12,9 @@
 <div class="task-list">
    <ul>
       {% for task in tasks %}
-      <li>{{ task }}</li>
+         <li>{{ task }}</li>
+      {% empty %}
+         <p> No tasks </p>
       {% endfor %}
    </ul>
 </div>
