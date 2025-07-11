@@ -1,0 +1,15 @@
+{% extends "flights/layout.html" %}
+
+{% block body %}
+<h1 style="text-align: center; margin: 5px;">Flights</h1>
+<div class="form-wrapper">
+    <ul>
+        {% for flight in flights %}
+            <li>
+                Flight {{flight.id}}: {{flight.origin}} to {{flight.destination}}
+                <a style="text-decoration: none;" href={{flight.id}}>Details</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "flights/layout.html" %}
+
+{% block body %}
+<h1 style="text-align: center; margin: 5px;">Flight {{flight.id}}</h1>
+<div class="form-wrapper">
+    <ul>
+        <li>Origin: {{flight.origin}}</li>
+        <li>Destination: {{flight.destination}}</li>
+        <li>Duration: {{flight.duration}} </li>
+    </ul>
+</div>
+
+<div style="margin-top: 20px;">
+    <a href="{% url 'flights:index' %}" class="button-view">⬅️ View Flights</a>
+</div>
+{% endblock %}
