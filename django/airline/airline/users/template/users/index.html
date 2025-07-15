@@ -1,0 +1,14 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+<h1 style="text-align: center; margin: 5px;">Flights</h1>
+<div class="form-wrapper">
+   <form action="{% url 'login' %}" method="post">
+    {%csrf_token%}
+
+        <input type="text" name="username" id="" palceholder="Username">
+        <input type="password" name="pasword" id="">
+        <input type="submit" value="Login">
+   </form>
+</div>
+{% endblock %}
