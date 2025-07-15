@@ -14,455 +14,198 @@ body {
    overflow-x: hidden;
 }
 
-.container {
-   max-width: 1200px;
-   margin: 0 auto;
-   padding: 0 20px;
-}
 
-header {
-   background-color: #1b263b;
-   color: #e0e1dd;
-   padding: 100px 20px 120px;
-   text-align: center;
-   position: relative;
-}
-
-.gradient-text {
-   border: none;
-   background: linear-gradient(90deg, #00F5FF, #0080FF, #FF00FF);
-   background-clip: text;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   font-size: 4.5em;
-   font-weight: 900;
-   margin-bottom: 30px;
-   letter-spacing: -2px;
-   line-height: 1.1;
-}
-
-.subtitle {
-   font-size: 1.5em;
-   margin-bottom: 50px;
-   color: #999;
-   font-weight: 300;
-   max-width: 700px;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-
-.hero-button {
-   display: inline-block;
-   background: linear-gradient(90deg, #00F5FF, #0080FF);
-   color: #000;
-   padding: 20px 60px;
-   border-radius: 100px;
-   border: none;
-   text-decoration: none;
-   font-size: 1.1em;
-   font-weight: 700;
-   text-transform: uppercase;
-   letter-spacing: 2px;
-   transition: 0.5s;
-}
-
-.hero-button:hover {
-   transform: scale(1.1);
-   box-shadow: 0 0 40px rgba(0, 245, 255, 0.5);
-}
-
-.benefits {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-   gap: 30px;
-   background-color: #000;
-   padding: 120px 20px;
-   position: relative;
-}
-
-.benefits h2 {
-   grid-column: 1 / -1;
-}
-
-.benefit-card {
-   background: linear-gradient(145deg, #111, #1a1a1a);
-   border: 1px solid #222;
-   border-radius: 30px;
-   padding: 50px 40px;
-   position: relative;
-   overflow: hidden;
-}
-
-.benefit-card::before {
-   content: '';
-   position: absolute;
-   top: -2px;
-   left: -2px;
-   right: -2px;
-   bottom: -2px;
-   background: linear-gradient(90deg, #00F5FF, #0080FF, #FF00FF);
-   border-radius: 30px;
-   opacity: 0;
-   z-index: -1;
-   transition: 0.5s ease;
-}
-
-.benefit-card:hover::before {
-   opacity: 1;
-
-}
-
-.benefit-card:hover {
-   transform: translateY(-10px);
-   background: #111;
-   cursor: pointer;
-   
-}
-
-.benefit-number {
-   font-size: 5em;
-   font-weight: 900;
-   background: linear-gradient(90deg, #00F5FF, #0080FF);
-   -webkit-background-clip: text;
-   background-clip: text;
-   -webkit-text-fill-color: transparent;
-   margin-bottom: 20px;
-}
-
-
-.benefit-card:hover .benefit-number {
-   background: none;
-   -webkit-background-clip: unset;
-   background-clip: unset;
-   -webkit-text-fill-color: unset;
-   color: #FF00FF;
-}
-
-.benefit-card h3{
-   color: #eee;
-}
-
-.benefit-number h3 {
-   color: #000;
-   line-height: 1.8;
-   font-size: 1.1em;
-}
-
-.section-title {
-   text-align: center;
-   font-size: 3em;
-   margin-bottom: 80px;
-   color: #fff;
-   font-weight: 1200;
-}
-
-.features {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 20px;
-   justify-content: center;
-   background-color: #111;
-   padding: 120px 20px;
-   text-align: center;
-
-}
-
-.features h2 {
-   width: 100%;
-   margin-bottom: 50px;
-}
-
-
-.pill {
-   color: #fff;
-   background-color: #000;
-   border: 2px solid #222;
-   border-radius: 50px;
-   font-weight: 600;
-   padding: 15px 30px;
-   transition: 0.5s;
-   cursor: pointer;
-}
-
-.pill:hover {
-   border-color: #00f5ff;
-   color: #00f5ff;
-   transform: scale(1.1);
-
-}
-
-.cta-section {
-   background: linear-gradient(145deg, #111, #1a1a1a);
-   border: 2px solid #222;
-   border-radius: 40px;
-   padding: 80px 60px;
-   text-align: center;
-   position: relative;
-   overflow: hidden;
-   margin: 120px auto;
-}
-
-.cta-section h2 {
-   font-size: 3em;
-   margin-bottom: 20px;
-   color: #fff;
-   font-weight: 800;
-}
-
-.cta-seciotn p {
-   font-size: 1.4em;
-   margin-bottom: 40px;
-   color: #888;
-}
-
-.title {
-   font-size: 1.5em;
-   margin-bottom: 50px;
-   color: #666;
-   font-weight: 800;
-   max-width: 700px;
-   margin-right: auto;
-}
-
-.title-footer{
-   font-size: 1.1em;
-   margin-bottom: 50px;
-   color: #666;
-   font-weight: 400;
-   max-width: 700px;
-   margin-right: auto;
-   margin-left: auto;
-}
-
-
-.footer-subtitle {
-   font-size: 1.2em;
-   color: #888;
-   margin-bottom: 20px;
-   border-top: 1px solid #222;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: center;
-}
-
-ul, ol, li {
+ul,
+ol,
+li {
    list-style-position: inside;
    padding-left: 0;
    margin-left: 0;
-  
+
 }
 
 
-/* From Uiverse.io by adamgiebl */ 
-.cssbuttons-io-button {
-  display: flex;
-  align-items: center;
-  font-family: inherit;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 0.7em 1.4em 0.7em 1.1em;
-  color: white;
-  background: #ad5389;
-  background: linear-gradient(
-    0deg,
-    rgba(20, 167, 62, 1) 0%,
-    rgba(102, 247, 113, 1) 100%
-  );
-  border: none;
-  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
-  letter-spacing: 0.05em;
-  border-radius: 20em;
-  margin: 5px 0 10px 0;
-}
-
-.cssbuttons-io-button svg {
-  margin-right: 6px;
-}
-
-.cssbuttons-io-button:hover {
-  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
-}
-
-.cssbuttons-io-button:active {
-  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
-}
-
-
-/* From Uiverse.io by bociKond */ 
+/* From Uiverse.io by bociKond */
 .form {
-  --bg-light: #efefef;
-  --bg-dark: #707070;
-  --clr: #58bc82;
-  --clr-alpha: #9c9c9c60;
-  --clean: #e0e1dd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  max-width: 300px;
+   --bg-light: #efefef;
+   --bg-dark: #707070;
+   --clr: #58bc82;
+   --clr-alpha: #9c9c9c60;
+   --clean: #e0e1dd;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   width: 100%;
+   max-width: 300px;
 }
 
 .form .input-span {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
 }
 
 .form input[type="text"],
 .form input[type="number"] {
-  border-radius: 0.5rem;
-  padding: 1rem 0.75rem;
-  width: 100%;
-  color: var(--clean);
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--clr-alpha);
-  outline: 2px solid var(--bg-dark);
+   border-radius: 0.5rem;
+   padding: 1rem 0.75rem;
+   width: 100%;
+   color: var(--clean);
+   border: none;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   background-color: var(--clr-alpha);
+   outline: 2px solid var(--bg-dark);
 }
 
 .form input[type="text"]:focus,
 .form input[type="number"]:focus {
-  outline: 2px solid var(--clr);
+   outline: 2px solid var(--clr);
 }
 
 .label {
-  align-self: flex-start;
-  color: var(--clr);
-  font-weight: 600;
+   align-self: flex-start;
+   color: var(--clr);
+   font-weight: 600;
 }
 
 .form .submit {
-  padding: 1rem 0.75rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 3rem;
-  background-color: var(--bg-dark);
-  color: var(--bg-light);
-  border: none;
-  cursor: pointer;
-  transition: all 300ms;
-  font-weight: 600;
-  font-size: 0.9rem;
+   padding: 1rem 0.75rem;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   border-radius: 3rem;
+   background-color: var(--bg-dark);
+   color: var(--bg-light);
+   border: none;
+   cursor: pointer;
+   transition: all 300ms;
+   font-weight: 600;
+   font-size: 0.9rem;
 }
 
 .form .submit:hover {
-  background-color: var(--clr);
-  color: var(--bg-dark);
+   background-color: var(--clr);
+   color: var(--bg-dark);
 }
 
 .span {
-  text-decoration: none;
-  color: var(--bg-dark);
+   text-decoration: none;
+   color: var(--bg-dark);
 }
 
 .span a {
-  color: var(--clr);
+   color: var(--clr);
 }
 
 
 .form-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.form-secondary {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 
-/* From Uiverse.io by cssbuttons-io */ 
+/* From Uiverse.io by cssbuttons-io */
 button {
- position: relative;
- display: inline-block;
- cursor: pointer;
- outline: none;
- border: 0;
- vertical-align: middle;
- text-decoration: none;
- background: transparent;
- padding: 0;
- font-size: inherit;
- font-family: inherit;
+   position: relative;
+   display: inline-block;
+   cursor: pointer;
+   outline: none;
+   border: 0;
+   vertical-align: middle;
+   text-decoration: none;
+   background: transparent;
+   padding: 0;
+   font-size: inherit;
+   font-family: inherit;
 }
 
 button.learn-more {
- width: 12rem;
- height: auto;
+   width: 12rem;
+   height: auto;
 }
 
 button.learn-more .circle {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: relative;
- display: block;
- margin: 0;
- width: 3rem;
- height: 3rem;
- background: #778da9;
- border-radius: 1.625rem;
+   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+   position: relative;
+   display: block;
+   margin: 0;
+   width: 3rem;
+   height: 3rem;
+   background: #778da9;
+   border-radius: 1.625rem;
 }
 
 button.learn-more .circle .icon {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- bottom: 0;
- margin: auto;
- background: #fff;
+   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   background: #fff;
 }
 
 button.learn-more .circle .icon.arrow {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- left: 0.625rem;
- width: 1.125rem;
- height: 0.125rem;
- background: none;
+   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+   left: 0.625rem;
+   width: 1.125rem;
+   height: 0.125rem;
+   background: none;
 }
 
 button.learn-more .circle .icon.arrow::before {
- position: absolute;
- content: "";
- top: -0.29rem;
- right: 0.0625rem;
- width: 0.625rem;
- height: 0.625rem;
- border-top: 0.125rem solid #fff;
- border-right: 0.125rem solid #fff;
- transform: rotate(45deg);
+   position: absolute;
+   content: "";
+   top: -0.29rem;
+   right: 0.0625rem;
+   width: 0.625rem;
+   height: 0.625rem;
+   border-top: 0.125rem solid #fff;
+   border-right: 0.125rem solid #fff;
+   transform: rotate(45deg);
 }
 
 button.learn-more .button-text {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- padding: 0.75rem 0;
- margin: 0 0 0 1.85rem;
- color: #778da9;
- font-weight: 700;
- line-height: 1.6;
- text-align: center;
- text-transform: uppercase;
+   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   padding: 0.75rem 0;
+   margin: 0 0 0 1.85rem;
+   color: #778da9;
+   font-weight: 700;
+   line-height: 1.6;
+   text-align: center;
+   text-transform: uppercase;
 }
 
 button:hover .circle {
- width: 100%;
+   width: 100%;
 }
 
 button:hover .circle .icon.arrow {
- background: #fff;
- transform: translate(1rem, 0);
+   background: #fff;
+   transform: translate(1rem, 0);
 }
 
 button:hover .button-text {
- color: #fff;
+   color: #fff;
 }
 
 a {
@@ -470,19 +213,19 @@ a {
 }
 
 .button-view {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+   display: inline-block;
+   padding: 10px 15px;
+   background-color: #007BFF;
+   color: white;
+   text-decoration: none;
+   border-radius: 5px;
+   margin-top: 20px;
 }
 
 .button-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
+   display: flex;
+   justify-content: center;
+   margin-top: 40px;
 }
 
 .task-list {
@@ -491,4 +234,159 @@ a {
    list-style-position: inside;
    max-width: 600px;
    text-align: justify;
+}
+
+
+input[type="submit"] {
+   padding: 1rem 0.75rem;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   border-radius: 3rem;
+   border: none;
+   cursor: pointer;
+   transition: all 300ms;
+   font-weight: 600;
+   font-size: 0.9rem;
+}
+
+
+/* From Uiverse.io by ilkhoeri */ 
+.dropdown {
+  border: 1px solid #c1c2c5;
+  border-radius: 12px;
+  transition: all 300ms;
+  display: flex;
+  flex-direction: column;
+  min-height: 58px;
+  color:#0d1b2a;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  inset-inline: auto;
+  max-width: 298px;
+  min-width: 298px;
+}
+.dropdown input:where(:checked) ~ .list {
+  opacity: 1;
+  transform: translateY(-3rem) scale(1);
+  transition: all 500ms ease;
+  margin-top: 32px;
+  padding-top: 4px;
+  margin-bottom: -32px;
+}
+.dropdown input:where(:not(:checked)) ~ .list {
+  opacity: 0;
+  transform: translateY(3rem);
+  margin-top: -100%;
+  user-select: none;
+  height: 0px;
+  max-height: 0px;
+  min-height: 0px;
+  pointer-events: none;
+  transition: all 500ms ease-out;
+}
+.trigger {
+  cursor: pointer;
+  list-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-weight: 600;
+  color: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  gap: 1rem;
+  padding: 1rem;
+  height: max-content;
+  position: relative;
+  z-index: 99;
+  border-radius: inherit;
+  background-color: white;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.dropdown input:where(:checked) + .trigger {
+  margin-bottom: 1rem;
+}
+.dropdown input:where(:checked) + .trigger:before {
+  rotate: 90deg;
+  transition-delay: 0ms;
+}
+
+
+.trigger:before,
+.trigger::after {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trigger:before {
+  content: "›";
+  rotate: -90deg;
+  width: 17px;
+  height: 17px;
+  color: #262626;
+  border-radius: 2px;
+  font-size: 26px;
+  transition: all 350ms ease;
+  transition-delay: 85ms;
+}
+
+.list {
+  height: 100%;
+  max-height: 20rem;
+  width: calc(100% - calc(var(--w-scrollbar) / 2));
+  display: grid;
+  grid-auto-flow: row;
+  overflow: hidden auto;
+  gap: 1rem;
+  padding: 0 1rem;
+  margin-right: -8px;
+  --w-scrollbar: 8px;
+}
+.listitem {
+  height: 100%;
+  width: calc(100% + calc(calc(var(--w-scrollbar) / 2) + var(--w-scrollbar)));
+  list-style: none;
+}
+.article {
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: justify;
+  width: 100%;
+  border: 1px solid #c1c2c5;
+  display: inline-block;
+  background-color: white;
+}
+
+.webkit-scrollbar::-webkit-scrollbar {
+  width: var(--w-scrollbar);
+  height: var(--w-scrollbar);
+  border-radius: 9999px;
+}
+.webkit-scrollbar::-webkit-scrollbar-track {
+  background: #0000;
+}
+.webkit-scrollbar::-webkit-scrollbar-thumb {
+  background: #0000;
+  border-radius: 9999px;
+}
+.webkit-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: #c1c2c5;
 }
