@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 # Create your views here.
 def index (request):
-    if not request.user.is_autenticated:
+    if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse("login"))
     
 def login_view(request):
@@ -15,7 +15,7 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect(reverse("login"))
+            return HttpResponseRedirect(reverse("index"))
         else:
             return render(request, "users/login.html",{
                 "message": "Invalid credentials."
