@@ -12,17 +12,8 @@ def login_view(request):
     if request.method == "POST":
         username = request.POST["username"].strip()
         password = request.POST["password"]
-        print("Usuário:", request.POST["username"])
-        print("Senha:", request.POST["password"])
-
         user = authenticate(request, username=username, password=password)
         
-        if user is not None:
-            print("Login bem-sucedido")
-        else:
-            print("Falha na autenticação")
-
-
         if user is not None:
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
