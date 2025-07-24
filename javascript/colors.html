@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212A3E">
+    <h1 id="hello" style="color: #F1F6F9">Hello</h1>
+
+    <select name="" id="">
+        <option value="white" disabled>White</option>
+        <option value="#E52020">Red</option>
+        <option value="green">Green</option>
+        <option value="#00BFFF">Blue</option>
+    </select>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            document.querySelector('select').onchange = function (){
+                    document.querySelector('#hello').style.color = this.value;
+                }
+            });
+
+
+            /*//change color to red
+            document.querySelector('#red').onclick = function () {
+                document.querySelector('#hello').style.color = 'red';
+            }
+
+            //change to green
+            document.querySelector('#green').onclick = function () {
+                document.querySelector('#hello').style.color = 'green';
+            }
+
+            //change to blue
+            document.querySelector('#blue').onclick = function () {
+                document.querySelector('#hello').style.color = '#00BFFF';
+            }*/
+
+    </script>
+</body>
+
+</html>
